@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Online shopping site for mobiles,Appliances</title>
+    <link rel="stylesheet" href="C:\Users\alen.anil\Desktop\flipkart2\flipkart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="icon" href="C:\Users\alen.anil\Desktop\flipkart2\flipkart.ico">
+  <link rel="stylesheet"
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- flipkart navbar -->
+
+    <nav class="navbar navbar-dark bg-primary" style="height:60px;padding:0px;" >
+      <div class="container-fluid" style="height:60px;padding:0px;">
+        <a><img src="C:\Users\alen.anil\Videos\Captures\flipkartheading.png" alt=""></a>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="width:400px;height:40px;margin:15px 0 0 0;">
+            <label for="floatingInput" style="color:black;margin:10px;">Search for products           <i class="fa fa-search" aria-hidden="true"></i>           </label>
+
+          </div>
+
+
+                <!-- Button trigger modal -->
+  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width:70px;border-radius:0px;" >
+  Login
+  </button>
+
+  <!-- Code for Modal -->
+
+<!--<div class = "modal" id = "loginmodal" role = "dialog">
+
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content custom">
+
+        <div class="block1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUkIQf5Q4XH1PxCWnsJMrihYH8XVz6Xyugg&usqp=CAU" style="height:100%;"></div>
+
+        <div class="block2">
+
+        <div class = "inblock2">
+
+          <input placeholder="Enter Email/Mobile number" style="border-style: none none solid none;">
+
+          <input placeholder="Enter Password" style="border-style: none none solid none;">
+
+          <span><p style="  color: #878787;
+
+            font-size: 12px;
+
+            font-weight: 400;
+
+          ">By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p></span>
+
+          <button type="button" class="btn btn-custom">Login</button>
+
+          <span><p>OR</p></span>
+
+          <button type="button" class="btn btn-custom2 shadow p-3 mb-5 bg-white rounded">Request OTP</button>
+
+          <a href = "#"><b><p>New to Flipkart? Create an account</p></b></a>
+
+        </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>-->
+
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+          <div class="modal-dialog" >
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content" >
+
+                <!--<div class="row">
+
+                               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUkIQf5Q4XH1PxCWnsJMrihYH8XVz6Xyugg&usqp=CAU" class="rounded" alt="...">
+</div>-->
+
+
+
+
+
+            <!--  <div class="row">-->
+
+              <div class="modal-body" style="padding:0px 0px 0px;width:800px;">
+                <div class="row">
+            <div class="col-md-6" style="background-color:#2874f0;" >
+              <h3 style="text-align:left;color:white;margin:15px;">Login</H3>
+                <p style="color:white; padding:10px;text-align:left;">Get access to your Orders,<br>Wishlist and <br>Recommendations</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUkIQf5Q4XH1PxCWnsJMrihYH8XVz6Xyugg&usqp=CAU" style="padding:300px 50px 50px;">
+
+            </div>
+            <div class="col-md-6" style="background-color:white;padding:50px;">
+              <div class="form-floating mb-3">
+                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="border: 0px  solid #ced4da;border-bottom: 1px solid #ced4da;">
+                     <label for="floatingInput" style="color:gray;">Email address</label>
+                 </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" style="border: 0px  solid #ced4da; border-bottom: 1px solid #ced4da;">
+                <label for="floatingPassword" style="color:gray;">Password</label>
+                    <p style="margin:25px; font-size:10px;">By continuing, you agree to <a href="#"> Flipkart's Terms of Use</a> and <a href="#">Privacy Policy</a>
+                </div>
+
+               <div class="text-center" style="padding:0px 0px 20px;">
+                  <button type="button" class="btn btn-primary" style="background:#fb641b;width:300px;" >Login</button>
+                  <br>
+                  <p style="margin:20px;color:gray;"> OR </p>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background:white;width:300px;color:blue;">Request OTP</button>
+                  <br>
+                 <br>
+                 <div class="text-center" style="margin:80px;">
+                 <p> <a href="#" style="text-decoration: none;width:150px;"> New to flipkart ? Make an account</a>
+                 </div>
+             </div>
+            </div>
+          </div>
+
+
+
+
+                <!--   <div class="form-floating mb-3">
+                       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                       <label for="floatingInput" style="color:gray;">Email address</label>
+                   </div>
+                  <div class="form-floating">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword" style="color:gray;">Password</label>
+                      <p>By continuing, you agree to <a href="#"> Flipkart's Terms of Use</a> and <a href="#">Privacy Policy</a>
+                  </div>
+
+                 <div class="text-center" style="padding:0px 0px 20px;">
+                    <button type="button" class="btn btn-primary" style="background:#fb641b;width:300px;" >Login</button>
+                    <br>
+                    <p> OR </p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background:white;width:300px;color:blue;">Request OTP</button>
+                    <br>
+                   <br>
+                   <div class="text-center" style="margin:80px;">
+                   <p> <a href="#"> New to flipkart ? Make an account</a>
+                   </div>
+               </div>-->
+             </div>
+</div>
+              </div>
+              </div>
+
+      <div>
+      <button type="button" class="btn " style="color:white;border:none;margin:  0 0 0 40px;">Become a seller</button>
+      </div>
+      <div class="dropdown dropdown-hover" >
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#0d6efd; border:none;">
+        More
+      </a>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+    <div>
+    <button type="button" class="btn" style="color:white;margin-right:120px;"> 🛒Cart</button>
+    </div>
+
+    </div>
+  </div>
+
+
+</nav>
+
+
+<!--second navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding:0px;">
+    <div class="card1" style="width: 9rem;padding:0px;">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" style="width:50px;height:50px;">
+
+       <h6 class="card-title" style="  font-family: Roboto,Arial,sans-serif;
+         font-size:14px;">Top Offers</h5>
+
+
+  </div>
+  </div>
+  <div class="card1" style="width: 9rem;">
+<img class="_396cs4  _3exPp9" alt="Mobiles" src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" style="width:50px;height:50px;">
+
+     <h6 class="card-title"  style="  font-family: Roboto,Arial,sans-serif;
+       font-size:14px;">Mobile</h5>
+
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+  <img class="_396cs4  _3exPp9" alt="Grocery" src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" style="width:50px;height:50px;">
+
+   <h6 class="card-title"  style="  font-family: Roboto,Arial,sans-serif;
+     font-size:14px;">Grocery</h5>
+
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+  <img class="_396cs4  _3exPp9" alt="Fashion" src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100"  style="width:50px;height:50px;">
+
+   <h6 class="card-title"  style="  font-family: Roboto,Arial,sans-serif;
+     font-size:14px;">Fashion</h5>
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+<img class="_396cs4  _3exPp9" alt="Electronics" src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" style="width:50px;height:50px;">
+
+   <h6 class="card-title" >  <div class="dropdown dropdown-hover">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="color:black; font-family: Roboto,Arial,sans-serif;
+       font-size:14px;">
+       Electronics
+     </button>
+     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+       <li><button class="dropdown-item" type="button">Action</button></li>
+       <li><button class="dropdown-item" type="button">Another action</button></li>
+       <li><button class="dropdown-item" type="button">Something else here</button></li>
+     </ul>
+   </div></h5>
+
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+<img class="_396cs4  _3exPp9" alt="Home" src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100"  style="width:50px;height:50px;">
+
+   <h5 class="card-title"><div class="dropdown dropdown-hover">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;font-family: Roboto,Arial,sans-serif;
+       font-size:14px;">
+       Home
+     </button>
+     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+       <li><button class="dropdown-item" type="button">Action</button></li>
+       <li><button class="dropdown-item" type="button">Another action</button></li>
+       <li><button class="dropdown-item" type="button">Something else here</button></li>
+     </ul>
+   </div></h5>
+
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+  <img class="_396cs4  _3exPp9" alt="Appliances" src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100"  style="width:50px;height:50px;">
+
+   <h5 class="card-title" style="color:black;"> <div class="dropdown dropdown-hover">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;font-family: Roboto,Arial,sans-serif;
+       font-size:14px;">
+      Appliances
+     </button>
+     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+       <li><button class="dropdown-item" type="button">Action</button></li>
+       <li><button class="dropdown-item" type="button">Another action</button></li>
+       <li><button class="dropdown-item" type="button">Something else here</button></li>
+     </ul>
+   </div></h5>
+
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+<img class="_396cs4  _3exPp9" alt="Travel" src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" style="width:50px;height:50px;">
+
+   <h6 class="card-title" style="  font-family: Roboto,Arial,sans-serif;
+     font-size:14px;"> Travel</h6>
+
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+<img class="_396cs4  _3exPp9" alt="Beauty, Toys &amp; More" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" style="width:50px;height:50px;">
+
+   <h6 class="card-title" style="  font-family: Roboto,Arial,sans-serif;
+     font-size:14px;">Beauty,Toys</h6>
+
+</div>
+</div>
+<div class="card1" style="width: 9rem;">
+<img class="_396cs4  _3exPp9" alt="Beauty, Toys &amp; More" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" style="width:50px;height:50px;">
+
+   <h6 class="card-title" style="  font-family: Roboto,Arial,sans-serif;
+     font-size:14px;">Grocery</h6>
+
+</div>
+</div>
+</nav>
+<!-- moving images aka carousel-->
+<nav>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"  data-interval="false" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000" data-interval="false">
+      <img src="C:\Users\alen.anil\Desktop\bootstrap\carousel2.jpg" class="d-block w-100" alt="..." style="width:251px;" >
+
+    </div>
+    <div class="carousel-item" data-bs-interval="2000" data-interval="false">
+      <img src="C:\Users\alen.anil\Desktop\bootstrap\carousel1234.jpg" class="d-block w-100" alt="">
+
+    </div>
+    <div class="carousel-item" data-bs-interval="2000" data-interval="false">
+      <img src="C:\Users\alen.anil\Desktop\bootstrap\carousel2.jpg" class="d-block w-100" alt="" >
+
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</nav>
+
+<!--third navbar with images-->
+<script src="C:\Users\alen.anil\Desktop\flipkart2\flipkart.js" charset="utf-8"></script>
+<div>
+<table style="padding:10px;">
+  <tr style="padding:10px;">
+    <td>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="  font-family: Roboto,Arial,sans-serif;
+            font-size:14px;"><b>Today's offer</b></a>
+          <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-rounded" type="submit" style="color:white;border:20px;">Show all</button>
+          </form>
+        <div>
+      </nav>
+    <td rowspan="2" style="padding:10px;">
+      <div class="text-center">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/464/708/image/e5d43b308280f531.jpg?q=70" class="w1" alt="..." style="padding:10px;">
+    <p class="card-text" style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;">Upto 70% off</p>
+      </div>
+   </td>
+  </tr>
+  <tr>
+   <td style="padding:10px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="zoom" style="width:195px; height:200px;" >
+       <img src="https://media.gettyimages.com/vectors/summer-sunglasses-vector-id1011271862?s=612x612" class="card-img-top" alt="..." style="padding:0px;" >
+       <div class="card-body" style="padding:0px;">
+         <p style="  font-family: Roboto,Arial,sans-serif;
+           font-size:14px;">Make up Essentials</p>
+         <p class="card-text"style="font-family: Roboto,Arial,sans-serif;
+           font-size:14px;color:green;">Upto 60% off</p>
+
+       </div>
+     </div>
+<div class="zoom" style="width:195px; height:200px;">
+  <img src="https://media.istockphoto.com/photos/watch-picture-id471712723?k=20&m=471712723&s=612x612&w=0&h=0KCGIGUbondcwPRxjsKDXVKVj-AWYvEqftYQKvLvdw4=" class="card-img-top" alt="..." style="padding:10px;">
+  <div class="card-body" style="padding:0px;">
+    <p style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;">Make up Essentials</p>
+    <p class="card-text"style="font-family: Roboto,Arial,sans-serif;
+      font-size:14px;color:green;">Upto 60% off</p>
+
+  </div>
+   </div>
+</div>
+ <div class="zoom" style="width:195px; height:200px;">
+  <img src="https://media.istockphoto.com/photos/two-brown-leather-belts-on-dark-background-picture-id1041615078?k=20&m=1041615078&s=612x612&w=0&h=p8D69blUXOjJwGTWdpRwNVGkJOH4gZQSV6Rr1KnKgmA=" class="card-img-top" alt="..." style="padding:10px;">
+  <div class="card-body" style="padding:0px;">
+    <p style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;">Make up Essentials</p>
+    <p class="card-text"style="font-family: Roboto,Arial,sans-serif;
+      font-size:14px;color:green;">Upto 60% off</p>
+
+  </div>
+   </div>
+</div>
+ <div class="zoom" style="width:195px; height:200px;">
+  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVkfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="card-img-top" alt="..."  style="padding:10px;">
+  <div class="card-body" style="padding:0px;">
+    <p style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;">Make up Essentials</p>
+    <p class="card-text"style="font-family: Roboto,Arial,sans-serif;
+      font-size:14px;color:green;">Upto 60% off</p>
+
+  </div>
+   </div>
+
+   <div class="zoom" style="width:195px; height:200px;">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVkfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="card-img-top" alt="..."  style="padding:10px;">
+    <div class="card-body" style="padding:0px;">
+      <p style="  font-family: Roboto,Arial,sans-serif;
+        font-size:14px;">Make up Essentials</p>
+      <p class="card-text"style="font-family: Roboto,Arial,sans-serif;
+        font-size:14px;color:green;">Upto 60% off</p>
+
+    </div>
+     </div>
+
+ </div>
+</td>
+</nav>
+</tr>
+</table>
+
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <p style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;"><b>Beauty,Food,Types & More</b></p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+      <form class="d-flex">
+
+        <button class="btn btn-outline" type="submit" style="color:white;">View all</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--4th navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="zoom" style="width:195px; height:200px;">
+  <img src="https://rukminim1.flixcart.com/image/300/300/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=70" class="card-img-top" alt="..." style="width:150px;height:120px;">
+    <div class="card-body" style="padding:0px;">
+    <p style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;" >Tricycle & Rideons</p>
+    <p class="card-text"style="font-size:14px;color:green;font-family: Roboto,Arial,sans-serif;">Upto 70% off</p>
+
+  </div>
+</div>
+
+<div class="zoom" style="width:195px; height:200px;">
+<img src="https://rukminim1.flixcart.com/image/300/300/light/h/9/h/imported-bicycle-rear-light-5-led-usb-rechargeable-waterproof-original-imaeq7hj3gppgcxz.jpeg?q=70" class="card-img-top" alt="..." style="width:150px;height:120px;">
+  <div class="card-body" style="padding:0px;">
+    <p style="  font-family: Roboto,Arial,sans-serif;
+      font-size:14px;">Cycle accessories</p>
+  <p class="card-text"style="font-size:14px;color:green;font-family: Roboto,Arial,sans-serif;">From $195</p>
+
+</div>
+</div>
+
+<div class="zoom" style="width:195px; height:200px;">
+<img src="https://rukminim1.flixcart.com/image/300/300/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=70" class="card-img-top" alt="..." style="width:150px;height:120px;">
+  <div class="card-body" style="padding:0px;">
+  <p style="  font-family: Roboto,Arial,sans-serif;
+    font-size:14px;">Musical Keyboards</p>
+  <p class="card-text"style="font-size:14px;color:green;font-family: Roboto,Arial,sans-serif;">Upto 70% off</p>
+
+</div>
+</div>
+
+<div class="zoom" style="width:195px; height:200px;">
+<img src="https://rukminim1.flixcart.com/image/300/300/jxz0brk0/stuffed-toy/n/t/s/4-feet-pink-very-beautiful-best-quality-for-special-gift-125-13-original-imafgv92puzkdytg.jpeg?q=70" class="card-img-top" alt="..." style="width:150px;height:120px;">
+  <div class="card-body" style="padding:0px;">
+  <p style="  font-family: Roboto,Arial,sans-serif;
+    font-size:14px;">Make up Essentials</p>
+  <p class="card-text"style="font-size:14px;color:green;font-family: Roboto,Arial,sans-serif;">Upto 60% off</p>
+
+</div>
+</div>
+
+<div class="zoom" style="width:195px; height:200px;">
+<img src="https://rukminim1.flixcart.com/image/300/300/k7w8eq80/two-wheeler-tyre/v/y/s/90-90-12-106061-milaze-tl-54j-sw-ceat-original-imafqyx5tnfraaxh.jpeg?q=70" class="card-img-top" alt="..." style="width:150px;height:120px;">
+  <div class="card-body" style="padding:0px;">
+  <p style="  font-family: Roboto,Arial,sans-serif;
+    font-size:14px;">Wheels </p>
+  <p class="card-text"style="font-size:14px;color:green;font-family: Roboto,Arial,sans-serif;">Upto 70% off</p>
+
+</div>
+</div>
+
+<div class="zoom" style="width:195px; height:200px;">
+<img src="https://rukminim1.flixcart.com/image/300/300/k7w8eq80/two-wheeler-tyre/v/y/s/90-90-12-106061-milaze-tl-54j-sw-ceat-original-imafqyx5tnfraaxh.jpeg?q=70" class="card-img-top" alt="..." style="width:150px;height:120px;" >
+  <div class="card-body" style="padding:0px;">
+  <p style="  font-family: Roboto,Arial,sans-serif;
+    font-size:14px;">cycle wheel </p>
+  <p class="card-text"style="font-size:14px;color:green;font-family: Roboto,Arial,sans-serif;">Upto 70% off</p>
+
+</div>
+</div>
+</nav>
+<br>
+<br>
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<table class="table table-dark table-striped">
+
+  <th>
+    About
+  </th>
+  <th>
+    Help
+  </th>
+  <th>
+    Policy
+  </th>
+  <th>
+    Social
+  </th>
+  <th>
+        Mail Us
+  </th>
+  <th >
+    Registered Office Address
+  </th>
+  <tr>
+    <td>Contact us
+    </td>
+    <td>payments
+    </td>
+    <td>return policy
+    </td>
+    <td>facebook
+    </td>
+    <td rowspan="5">
+<p >
+        Flipkart Internet Private Limited,<br>
+
+  Buildings Alyssa, Begonia &<br>
+
+  Clove Embassy Tech Village,<br>
+
+  Outer Ring Road, Devarabeesanahalli Village,<br>
+
+  Bengaluru, 560103,<br>
+
+  Karnataka, India
+
+  <p>
+
+    </td>
+    <td rowspan="5">
+
+        Flipkart Internet Private Limited,<br>
+
+    Buildings Alyssa, Begonia &<br>
+
+    Clove Embassy Tech Village,<br>
+
+    Outer Ring Road, Devarabeesanahalli Village,<br>
+
+    Bengaluru, 560103,<br>
+
+    Karnataka, India<br>
+
+    CIN : U51109KA2012PTC066107<br>
+
+    Telephone: 044-45614700
+
+    </td>
+
+</tr>
+  <tr>
+    <td>Contact us
+    </td>
+    <td>payments
+    </td>
+    <td>return policy
+    </td>
+    <td>facebook
+    </td>
+  </tr>
+  <tr>
+    <td>Contact us
+    </td>
+    <td>payments
+    </td>
+    <td>return policy
+    </td>
+    <td>facebook
+    </td>
+  </tr>
+  <tr>
+    <td>Contact us
+    </td>
+    <td>payments
+    </td>
+    <td>return policy
+    </td>
+    <td>facebook
+    </td>
+  </tr>
+</table>
+
+</nav>-->
+<!-- Footer -->
+<!-- Footer -->
+<!-- Footer -->
+<!--
+<footer>
+      <div>
+      <table  class="beta" style="width:100%;paddtext-align:center;background-color:black;">
+      <tr>
+      <th><font color="white" align="center">About</font></th>
+      <th><font color="white" align="center">Help</font></th>
+      <th><font color="white" align="center">Policy</font></th>
+      <th><font color="white" align="center">Social</font></th>
+      <th><font color="white" align="center">          Mail Us</font></th>
+      <th><font color="white" align="center">Registered office Address</font></th>
+      </tr>
+      <tr>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Contact Us</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Payments</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Return Policy</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Facebook</font></a></td>
+      <td><font color="white"> Alyssa, Begonia & Clove Embassy Tech Village,Outer Ring Road,</font></th>
+      <td><font color="white">Flipkart Internet Private Limited,</font></td>
+      </tr>
+      <tr>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">About Us</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Terms of Use</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Shipping</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Twitter</font></a></td>
+      <td><font color="white"> Tech Village,Outer Ring Road, Devarabeesanahalli Village,Bengaluru, 560103,Karnataka, India</font></th>
+      <td><font color="white"> Devarabeesanahalli Village</font></td>
+      </tr>
+      <tr>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Careers</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Cancellation and Return</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Security</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Youtube</font></a></td>
+      <td><font color="white">, Devarabeesanahalli Village</font></th>
+      <td><font color="white">Bengaluru, 560103,Karnataka, India</font></td>
+      </tr>
+      <tr>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Flipkart Stories</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">FAQ</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Privacy</font></a></td>
+      <td></td>
+
+      <td><font color="white">,Bengaluru, 560103,Karnataka, India</font></th>
+      <td><font color="white">,Karnataka, IndiaCIN </font></td>
+      </tr>
+      <tr>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Press</font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Report Infringement </font></a></td>
+      <td style="white-space: nowrap;"><a href="#"><font color="white">Sitemap</font></a></td>
+      <td></td>
+      <td><font color="white">Karnataka, India</font></th>
+      <td><font color="white"> U51109KA2012PTC066107Telephone: 044-45614700</font></td>
+      </table>
+      </div>
+-->
+<div style="color:gray;font-size:10px;  font-family: Roboto,Arial,sans-serif;"><p class="paragraph">
+<h6> Top Stories:Brand Directory</h6>
+<b>MOST SEARCHED FOR ON FLIPKART</b>:Bounce Infinity E1Google Pixel | 6Avivo | T1XOPPO | Reno8| 5GOPPO | Reno8 | Pro 5GNothing Phone| 1Sell Old Mobile Phones|ASUS TUF Gaming F15 Core i5 10th Gen|Electronics Store|OPPO A16KVivo| Y33TOPPO Reno7 5GBathroom Exhaust FanSamsung Window ACOPPO Reno7 Pro 5GiPhone 13iPhone 13 ProiPhone 13 Pro MaxiPhone 13 MiniGoogle Pixel 6a coversFlipkart QuickBooksFlipkart Help CentreOnline Boat StoreFlipkart Track Orders|Flipkart Manage Orders|Flipkart Return Orders| Flipkart Gift Cards Store| Flipkart Axis Bank Credit Card | Flipkart Pay Later<br><br>
+
+<b>MOBILES</b>:iPhone 12 64GB| iPhone 12 Pro 512GB| iPhone 12 128GB| Vivo Y91iVivo | Y11Vivo  | Y15Vivo| Y50Vivo | Y12Reno2 | FOppo | A12Oppo | F15Oppo | A31Samsung | A71Samsung | A51Samsung | A31Realme | X2iPhone  | 11iPhone 11 Pro| iPhone 11 Pro |MaxMobile Offersiphone x4G MobileNokia MobileSamsung MobileiphoneOppo MobileVivo Mobile <br><br>
+
+<b>CAMERA</b>:GoPro Action CameraNikon CameraCanon CameraSony  | CameraCanon DSLRNikon DSLR<br><br>
+<b>LAPTOPS</b>:MacBook Pro |  M2acer Ryzen 3 Dual Core 3250U - (8 GB/256 GB SSD/Windows 11 Home) | Z2-493 Thin and Light Laptop  |  ASUS Vivobook S14 OLED (2022) |  ASUS Zenbook 14 OLED (2022) |  Realme Book Prime Core i5 11th Gen| Microsoft Surface Go Pentium 128GB  | Branded LaptopsApple LaptopsAcer | LaptopsLenovo LaptopsDell | LaptopsAsus LaptopsHP Laptops | Gaming Laptops2 in 1 LaptopsLaptops  |  Dell latest laptops 2022 |  HP latest laptops 2022  | Infinix INBook X1 Neo Series Celeron Quad Core - (8 GB/256 GB SSD/Windows 11 Home) | XL22 Thin and Light Laptop  |  Microsoft Laptops<br><br>
+<b>TVS</b>:Nokia TVPanasonic | TVThomson TVVu | TVRealme | TVMotorola | TVOnePlus | TVsLG | TVTVSony  | TVSamsung | TVAndroid Television | Iffalcon TvMi TV<br><br>
+<b>LARGE APPLIANCES</b>:TV & Appliances End of Season  | SaleTelevisionWashing | MachinesRefrigeratorsAir | ConditionersElectric | CookersElectric | Jug(Heater) / Travel Kettles | Induction CooktopsInverters / stabilizerIrons / Iron BoxMixer Grinder | JuicerWet GrindersChimneys | Microwave OvensVacuum CleanersWater |  PurifierFanMarQ Customer Care<br><br>
+<b>CLOTHING</b>:Men Shirts | Kurta PajamaKurtasMen  |  T-ShirtsJeans | SareeDresses | Kids Dresses | Designer Salwar Suits | BraDesigner | KurtisTrack |  PantMen Kurtas | Gym WearParty Dresses | Palazzo SuitsBoys Clothing | Gloves | Nighty | Maxi Dresses | Anarkali | Gowns | culottes| Salwar Suits|Kurtis | Designer Sarees | Leggings| ShortsGeorgette SareesEthnic WearBriefs & TrunksNike WatchesAscot TieCorset Tops TunicsLeather PU SkirtsCorset tops camisolesWomen magenta earringsNo collar jackets | Green dress materialn| Black patiala kurta set| Men camel shoes casual| Black pathani| Wallets sling| Khaki dresses | Kids formal dresses | Mauve shirts | Women henley | Indigo trousers| Leopard dresses | Sleeveless | shrugs<br>
+<b>FOOTWEAR</b>:Shoes | Adidas Shoes | Reebok Shoes | Nike Shoes  | Puma Shoes  | Boots   | Bata Shoes  | Woodland Shoes  | Skechers Shoes | Sneakers| Womens Boots | Sports Shoes | Loafers| Sandals  |Lotto Sports Shoes | Casual Shoes | Womens Skechers Shoes    |Asics Sports Shoes | Formal Shoes | School Shoes<br><br>
+<b>GROCERIES</b>:PhonePe Grocery |  VoucherHand WashSoap | Cashew Nuts | Sunflower OilEggs | Toilet CleanerHarpic Toilet Cleaner | Dettol Soap | Mustard Oil | Biscuits | Cheese| Patanjali Atta| Fortune Oil| Aashirvaad Atta | Tea<br><br>
+<b>BEST SELLING ON FLIPKART</b>:TAGG Verve Engage SmartwatchBest Gas GeyserKitchen GeyserNutri BlendersPortable Air CoolerBest Air CoolerBagsHitachi Refrigerator 3 DoorBooksToysCandlesHelmetsWall ClocksBaby Food | Chocolates| Cycles | Calculators |Lipsticks |Mask |Vertiv | UPSFastrack | Watches |Wallets Earrings |Gold Coins |Realme Pad Mini |Handbagsconekt SW2 Smartwatch| Mivi DuoPods a350| Speaker Cleaner<br><br>
+<b>FURNITURE</b>:FurnitureSofasBedsDining setsWardrobesMattressesTV UnitsTablesChairsShelvesBean BagsOffice ChairsComputer TableOffice TablesRed SofaWakefit BedsWhite SofaWakefit MattressGreen SofaBlack SofaBrown Sofa<br>
+<b>BGMH</b>:Whey Protein| HomeopathyBounce Infinity       | ToysRusOnline     | GuitarBooks|  StoreMusical| Instrument|  StoreEnergy Drinks| ToysMilk Drink MixesRakhiIndian Flag| Protein Supplements
+<br>
+<br>
+<h6><b>Flipkart: The One-stop Shopping Destination</b></h6>
+E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Flipkart houses everything you can possibly imagine, from trending electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down
+<br>
+<br>
+
+What's more, with our year-round shopping festivals and events, our prices are irresistible. We're sure you'll find yourself picking up more than what you had in mind. If you are wondering why you should shop from Flipkart when there are multiple options available to you, well, the below will answer your question.
+
+
+<h6><b>Flipkart Plus</b></h6>
+A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty reward programme for all its regular customers at zero subscription fee. All you need is 500 supercoins to be a part of this service. For every 100 rupees spent on Flipkart order, Plus members earns 4 supercoins & non-plus members earn 2 supercoins. Free delivery, early access during sales and shopping festivals, exchange offers and priority customer service are the top benefits to a Flipkart Plus member. In short, earn more when you shop more!
+<br><br>
+What's more, you can even use the Flipkart supercoins for a number of exciting services, like:
+An annual Zomato Gold membership
+An annual Hotstar Premium membership
+6 months Gaana plus subscription
+Rupees 550 instant discount on flights on ixigo
+Check out<a href="https://www.flipkart.com/plus/all-offers"> https://www.flipkart.com/plus/all-offers</a> for the entire list. Terms and conditions apply.
+<h6><b>No Cost EMI</b></h6>
+In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to shop with us under EMI, without shelling out any processing fee. Applicable on select mobiles, laptops, large and small appliances, furniture, electronics and watches, you can now shop without burning a hole in your pocket. If you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take a look ASAP! Terms and conditions apply.
+<br>
+<br>
+
+<h6><b>EMI ON DEBIT CARDS</b></h6>
+Did you know debit card holders account for 79.38 crore in the country, while there are only 3.14 crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make online shopping accessible to everyone, Flipkart introduces EMI on Debit Cards, empowering you to shop confidently with us without having to worry about pauses in monthly cash flow. At present, we have partnered with Axis Bank, HDFC Bank, State Bank of India and ICICI Bank for this facility. More power to all our shoppers! Terms and conditions apply.
+<br>
+<br>
+
+
+<h6><b>Mobile Exchange Offers</b></h6>
+Get an instant discount on the phone that you have been eyeing on. Exchange your old mobile for a new one after the Flipkart experts calculate the value of your old phone, provided it is in a working condition without damage to the screen. If a phone is applicable for an exchange offer, you will see the 'Buy with Exchange' option on the product description of the phone. So, be smart, always opt for an exchange wherever possible. Terms and conditions apply.
+<br>
+<br>
+
+
+<h6><b>Mobile Phones</b></h6>
+From budget phones to state-of-the-art smartphones, we have a mobile for everybody out there. Whether you're looking for larger, fuller screens, power-packed batteries, blazing-fast processors, beautification apps, high-tech selfie cameras or just large internal space, we take care of all the essentials. Shop from top brands in the country like Samsung, Apple, Oppo, Xiaomi, Realme, Vivo, and Honor to name a few. Rest assured, you're buying from only the most reliable names in the market. What's more, with Flipkart's Complete Mobile Protection Plan, you will never again find the need to run around service centres. This plan entails you to a number of post-purchase solutions, starting at as low as Rupees 99 only! Broken screens, liquid damage to phone, hardware and software glitches, and replacements - the Flipkart Complete Mobile Protection covers a comprehensive range of post-purchase problems, with door-to-door services.
+<br>
+
+
+<h6><b>Electronic Devices and Accessories</b></h6>
+When it comes to laptops, we are not far behind. Filter among dozens of super-fast operating systems, hard disk capacity, RAM, lifestyle, screen size and many other criterias for personalized results in a flash. All you students out there, confused about what laptop to get? Our Back To College Store segregates laptops purpose wise (gaming, browsing and research, project work, entertainment, design, multitasking) with recommendations from top brands and industry experts, facilitating a shopping experience that is quicker and simpler.
+
+Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store. Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store.
+
+Turn your home into a theatre with a stunning surround sound system. Choose from our elaborate range of Sony home theatres, JBL soundbars and Philips tower speakers for an experience to remember.
+
+How about jazzing up your phone with our quirky designer cases and covers? Our wide-ranging mobile accessories starting from headphones, power banks, memory cards, mobile chargers, to selfie sticks can prove to be ideal travel companions for you and your phone; never again worry about running out of charge or memory on your next vacation.
+<br>
+<br>
+
+
+<h6><b>Large Appliances</b></h6>
+Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful washing machines - discover everything you need to run a house under one roof. Our Dependable TV and Appliance Store ensures zero transit damage, with a replacement guarantee if anything goes wrong; delivery and installation as per your convenience and a double warranty (Official Brand Warranty along with an extended Flipkart Warranty) - rest assured, value for money is what is promised and delivered. Shop from market leaders in the country like Samsung, LG, Whirlpool, Midea, Mi, Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.
+<br>
+<br>
+
+</p>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted" style="  font-family: Roboto,Arial,sans-serif;
+  font-size:14px;">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Mail Us
+          </h6>
+          <p>
+            Flipkart Internet Private Limited,
+
+Buildings Alyssa, Begonia &
+
+Clove Embassy Tech Village,
+
+Outer Ring Road, Devarabeesanahalli Village,
+
+Bengaluru, 560103,
+
+Karnataka, India
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            About
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Flipkart stories</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">contact us</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">about us</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset"></a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            HELP
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Payments</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">shipping</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Cancellation</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">returns</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Registered Office Address:</h6>
+          <p style="margin:0px;"> Flipkart Internet Private Limited,</p>
+          <p style="margin:0px;">
+
+            Buildings Alyssa, Begonia &
+
+Clove Embassy Tech Village,
+          </p style="margin:0px;">
+          <p>Outer Ring Road, Devarabeesanahalli Village,
+
+Bengaluru, 560103,</p>
+          <p style="margin:0px;"> Karnataka, India
+
+CIN : U51109KA2012PTC066107</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+
+
+</footer>
+<!-- Footer -->
